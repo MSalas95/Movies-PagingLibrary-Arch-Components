@@ -16,6 +16,7 @@ class PageListMovieBoundaryCallback(private val moviesRemoteDataSource: MoviesRe
 
     override fun onZeroItemsLoaded() {
         Log.i(TAG, "onZeroItemsLoaded")
+        requestedPage = 1
         fetchAndStoreMovies()
     }
 
